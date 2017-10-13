@@ -1,0 +1,242 @@
+Column,Name,Level,Rename
+Gender,Boy,1,Boy
+Gender,Girl,2,Girl
+Age,12 years,2,12 years
+Age,13 years,3,13 years
+Age,14 years,4,14 years
+Age,15 years,5,15 years
+Age,16 years and above,6,16+ years
+Age,Upto 11 years,1,11- years
+Category,0,0,0
+Category,1,1,1
+Category,2,2,2
+Category,3,3,3
+Category,4,4,4
+Same language,0,0,0
+Same language,1,1,1
+Same language,2,2,2
+Siblings,1 sibling,1,1 sibling
+Siblings,2 sibling,2,2 siblings
+Siblings,3 sibling,3,3 siblings
+Siblings,4 and above sibling,4,4+ siblings
+Siblings,Single Child,0,Single child
+Handicap,0,0,Unknown
+Handicap,1,1,Yes
+Handicap,2,2,No
+Father edu,Degree and above,5,Degree & above
+Father edu,Illiterate,1,Illiterate
+Father edu,Not applicable,0,Not applicable
+Father edu,Primary level,2,Primary
+Father edu,Secondary level,3,Secondary
+Father edu,Senior secondary level,4,Sr secondary
+Mother edu,Degree and above,5,Degree & above
+Mother edu,Illiterate,1,Illiterate
+Mother edu,Not applicable,0,Not applicable
+Mother edu,Primary level,2,Primary
+Mother edu,Secondary level,3,Secondary
+Mother edu,Senior secondary level,4,Sr secondary
+Father occupation,Clerk,4,Clerk
+Father occupation,Do not know,0,Do not know
+Father occupation,Farmer,3,Farmer
+Father occupation,Labourer,2,Labourer
+Father occupation,Manager/Senior Officer/Professional,8,Professional
+Father occupation,Shopkeeper/ Businessman,6,Business
+Father occupation,Skilled Worker,5,Skilled Worker
+Father occupation,Teacher/Lecturer/Professor,7,Teacher/Lecturer
+Father occupation,Unemployed,1,Unemployed
+Mother occupation,Clerk,4,Clerk
+Mother occupation,Do not know,0,Do not know
+Mother occupation,Farmer,3,Farmer
+Mother occupation,Labourer,2,Labourer
+Mother occupation,Manager/Senior Officer/Professional,8,Professional
+Mother occupation,Shopkeeper/ Businessman,6,Business
+Mother occupation,Skilled Worker,5,Skilled Worker
+Mother occupation,Teacher/Lecturer/Professor,7,Teacher/Lecturer
+Mother occupation,Unemployed,1,Unemployed
+Below poverty,Don't know,0,Don't know
+Below poverty,No,1,No
+Below poverty,Yes,2,Yes
+Use calculator,No,1,No
+Use calculator,Yes,2,Yes
+Use calculator,No,1,No
+Use calculator,Yes,2,Yes
+Use Internet,No,1,No
+Use Internet,Yes,2,Yes
+Use dictionary,No,1,No
+Use dictionary,Yes,2,Yes
+Read other books,No,1,No
+Read other books,Yes,2,Yes
+# Books,11to25 books,3,11-125 books
+# Books,1to10 books,2,1-10 books
+# Books,More than 25 books,4,25+ books
+# Books,No books,1,No books
+Distance,More than 1 to 3 km,2,1-3 km
+Distance,More than 3 to 5 km,3,3-5 km
+Distance,More than 5 km,4,More than 5 km
+Distance,Up to 1 km,1,Up to 1 km
+Computer use,Daily,5,Daily
+Computer use,No computer,1,No computer
+Computer use,Once in a week,4,Once in a week
+Computer use,Once in month,3,Once in month
+Computer use,"Yes, but never use",2,"Never use"
+Library use,More than once in a week,5,More than once in a week
+Library use,No library,1,No library
+Library use,Once in a week,4,Once in a week
+Library use,Once or twice in a month,3,Once or twice in a month
+Library use,"Yes, but never use",2,"Never use"
+Like school,No,1,No
+Like school,Yes,2,Yes
+Subjects,Language,L,Language
+Subjects,Mathematics,M,Mathematics
+Subjects,None,0,None
+Subjects,Science,S,Science
+Subjects,Social Science,O,Social Science
+Give Lang HW,1or2 times a week,2,1-2 times a week
+Give Lang HW,3or4 times a week,3,3-4 times a week
+Give Lang HW,Everyday,4,Everyday
+Give Lang HW,Never,1,Never
+Give Math HW,1or2 times a week,2,1-2 times a week
+Give Math HW,3or4 times a week,3,3-4 times a week
+Give Math HW,Everyday,4,Everyday
+Give Math HW,Never,1,Never
+Give Scie HW,1or2 times a week,2,1-2 times a week
+Give Scie HW,3or4 times a week,3,3-4 times a week
+Give Scie HW,Everyday,4,Everyday
+Give Scie HW,Never,1,Never
+Give SoSc HW,1or2 times a week,2,1-2 times a week
+Give SoSc HW,3or4 times a week,3,3-4 times a week
+Give SoSc HW,Everyday,4,Everyday
+Give SoSc HW,Never,1,Never
+Correct Lang HW,1 or2 times a week,2,1-2 times a week
+Correct Lang HW,3 or4 times a week,3,3-4 times a week
+Correct Lang HW,Everyday,4,Everyday
+Correct Lang HW,Never,1,Never
+Correct Math HW,1 or2 times a week,2,1-2 times a week
+Correct Math HW,3 or4 times a week,3,3-4 times a week
+Correct Math HW,Everyday,4,Everyday
+Correct Math HW,Never,1,Never
+Correct Scie HW,1 or2 times a week,2,1-2 times a week
+Correct Scie HW,3 or4 times a week,3,3-4 times a week
+Correct Scie HW,Everyday,4,Everyday
+Correct Scie HW,Never,1,Never
+Correct SocS HW,1 or2 times a week,2,1-2 times a week
+Correct SocS HW,3 or4 times a week,3,3-4 times a week
+Correct SocS HW,Everyday,4,Everyday
+Correct SocS HW,Never,1,Never
+Help in Study,No,1,No
+Help in Study,Yes,2,Yes
+Private tuition,No,1,No
+Private tuition,Yes,2,Yes
+English is difficult,Agree,3,Agree
+English is difficult,Disagree,1,Disagree
+English is difficult,Neither agree or disagree,2,Neither
+Read English,Agree,3,Agree
+Read English,Disagree,1,Disagree
+Read English,Neither agree or disagree,2,Neither
+Dictionary to learn,Agree,3,Agree
+Dictionary to learn,Disagree,1,Disagree
+Dictionary to learn,Neither agree or disagree,2,Neither
+Answer English WB,Agree,3,Agree
+Answer English WB,Disagree,1,Disagree
+Answer English WB,Neither agree or disagree,2,Neither
+Answer English aloud,Agree,3,Agree
+Answer English aloud,Disagree,1,Disagree
+Answer English aloud,Neither agree or disagree,2,Neither
+Maths is difficult,Agree,3,Agree
+Maths is difficult,Disagree,1,Disagree
+Maths is difficult,Neither agree or disagree,2,Neither
+Solve Maths,Agree,3,Agree
+Solve Maths,Disagree,1,Disagree
+Solve Maths,Neither agree or disagree,2,Neither
+Solve Maths in groups,Agree,3,Agree
+Solve Maths in groups,Disagree,1,Disagree
+Solve Maths in groups,Neither agree or disagree,2,Neither
+Draw geometry,Agree,3,Agree
+Draw geometry,Disagree,1,Disagree
+Draw geometry,Neither agree or disagree,2,Neither
+Explain answers,Agree,3,Agree
+Explain answers,Disagree,1,Disagree
+Explain answers,Neither agree or disagree,2,Neither
+SocSci is difficult,Agree,3,Agree
+SocSci is difficult,Disagree,1,Disagree
+SocSci is difficult,Neither agree or disagree,2,Neither
+Historical excursions,Agree,3,Agree
+Historical excursions,Disagree,1,Disagree
+Historical excursions,Neither agree or disagree,2,Neither
+Participate in SocSci,Agree,3,Agree
+Participate in SocSci,Disagree,1,Disagree
+Participate in SocSci,Neither agree or disagree,2,Neither
+Small groups in SocSci,Agree,3,Agree
+Small groups in SocSci,Disagree,1,Disagree
+Small groups in SocSci,Neither agree or disagree,2,Neither
+Express SocSci views,Agree,3,Agree
+Express SocSci views,Disagree,1,Disagree
+Express SocSci views,Neither agree or disagree,2,Neither
+Science is difficult,Agree,3,Agree
+Science is difficult,Disagree,1,Disagree
+Science is difficult,Neither agree or disagree,2,Neither
+Observe experiments,Agree,3,Agree
+Observe experiments,Disagree,1,Disagree
+Observe experiments,Neither agree or disagree,2,Neither
+Conduct experiments,Agree,3,Agree
+Conduct experiments,Disagree,1,Disagree
+Conduct experiments,Neither agree or disagree,2,Neither
+Solve science problems,Agree,3,Agree
+Solve science problems,Disagree,1,Disagree
+Solve science problems,Neither agree or disagree,2,Neither
+Express science views,Agree,3,Agree
+Express science views,Disagree,1,Disagree
+Express science views,Neither agree or disagree,2,Neither
+Watch TV,Every day,4,Every day
+Watch TV,Never,1,Never
+Watch TV,Once a month,2,Once a month
+Watch TV,Once a week,3,Once a week
+Read magazine,Every day,4,Every day
+Read magazine,Never,1,Never
+Read magazine,Once a month,2,Once a month
+Read magazine,Once a week,3,Once a week
+Read a book,Every day,4,Every day
+Read a book,Never,1,Never
+Read a book,Once a month,2,Once a month
+Read a book,Once a week,3,Once a week
+Play games,Every day,4,Every day
+Play games,Never,1,Never
+Play games,Once a month,2,Once a month
+Play games,Once a week,3,Once a week
+Help in household,Every day,4,Every day
+Help in household,Never,1,Never
+Help in household,Once a month,2,Once a month
+Help in household,Once a week,3,Once a week
+State,AN,AN,Andaman & Nicobar
+State,AP,AP,Andhra Pradesh
+State,AR,AR,Arunachal Pradesh
+State,BR,BR,Bihar
+State,CG,CG,Chattisgarh
+State,CH,CH,Chandigarh
+State,DD,DD,Daman & Diu
+State,DL,DL,Delhi
+State,DN,DN,Dadra & Nagar Haveli
+State,GA,GA,Goa
+State,GJ,GJ,Gujarat
+State,HP,HP,Himachal Pradesh
+State,HR,HR,Haryana
+State,JH,JH,Jharkhand
+State,JK,JK,Jammu & Kashmir
+State,KA,KA,Karnataka
+State,KL,KL,Kerala
+State,MG,MG,Meghalaya
+State,MH,MH,Maharashtra
+State,MN,MN,Manipur
+State,MP,MP,Madhya Pradesh
+State,MZ,MZ,Mizoram
+State,NG,NG,Nagaland
+State,OR,OR,Orissa
+State,PB,PB,Punjab
+State,PY,PY,Pondicherry
+State,RJ,RJ,Rajasthan
+State,SK,SK,Sikkim
+State,TN,TN,Tamil Nadu
+State,TR,TR,Tripura
+State,UK,UK,Uttarakhand
+State,UP,UP,Uttar Pradesh
+State,WB,WB,West Bengal

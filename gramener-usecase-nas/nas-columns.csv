@@ -1,0 +1,64 @@
+Name,Rename,Type
+PQ2,Gender,Group
+DIST,District,
+STATE,State,
+PQ3,Age,Group
+PQ4,Category,
+PQ5,Same language,
+PQ6,Siblings,Group
+PQ7,Handicap,
+PQ8a,Father edu,Group
+PQ8b,Mother edu,Group
+PQ9a,Father occupation,Group
+PQ9b,Mother occupation,Group
+PQ10,Below poverty,Group
+PQ11a,Use calculator,Group
+PQ11b,Use computer,
+PQ11c,Use Internet,
+PQ11d,Use dictionary,Group
+PQ12a,Read other books,Group
+PQ12b,# Books,Group
+PQ13,Distance,Group
+PQ14,Computer use,Group
+PQ15,Library use,Group
+PQ16,Like school,
+PQ17,Subjects,
+PQ18a,Give Lang HW,
+PQ18b,Give Math HW,
+PQ18c,Give Scie HW,
+PQ18d,Give SoSc HW,
+PQ19a,Correct Lang HW,
+PQ19b,Correct Math HW,
+PQ19c,Correct Scie HW,
+PQ19d,Correct SocS HW,
+PQ20,Help in Study,
+PQ21,Private tuition,Group
+PQ22a,English is difficult,
+PQ22b,Read English,
+PQ22c,Dictionary to learn,
+PQ22d,Answer English WB,
+PQ22e,Answer English aloud,
+PQ23a,Maths is difficult,
+PQ23b,Solve Maths,
+PQ23c,Solve Maths in groups,
+PQ23d,Draw geometry,
+PQ23e,Explain answers,
+PQ24a,SocSci is difficult,
+PQ24b,Historical excursions,
+PQ24c,Participate in SocSci,
+PQ24d,Small groups in SocSci,
+PQ24e,Express SocSci views,
+PQ25a,Science is difficult,
+PQ25b,Observe experiments,
+PQ25c,Conduct experiments,
+PQ25d,Solve science problems,
+PQ25e,Express science views,
+PQ26a,Watch TV,Group
+PQ26b,Read magazine,Group
+PQ26c,Read a book,Group
+PQ26d,Play games,Group
+PQ26e,Help in household,Group
+mathpcor,Maths %,Number
+readpcor,Reading %,Number
+sciepcor,Science %,Number
+socspcor,Social %,Number
