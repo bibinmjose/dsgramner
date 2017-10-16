@@ -20,6 +20,8 @@ We have attempted to answer three most pertaining questions below.
 
 We defined an additional performance metric as 'performance' = average of ('Maths %', 'Reading %', 'Science %', 'Social %') to find which feature has the highest overall influence. A feature selection is performed and scores are calculated based on `SelectKBest` to evaluvate the relative importance of features. The top features were found for each category is given below.
 
+![png](output_14_0.png)
+
 |Parameter|Best Feature |
 | --- |:--- |
 |Overall Performance|'Father edu'|
@@ -28,15 +30,34 @@ We defined an additional performance metric as 'performance' = average of ('Math
 |Science|'Father edu'|
 |Social|'Help in household'|
 
-![png](output_14_0.png)
 
-This concludeds that the education of parents were the most decisive predictor in deciding a student's  performance.
+
+This concludes that the education of parents were the most decisive predictor in deciding a student's  performance.
+
+#### Some interesting observations
+
+* Some features are influential in the performance of certain subjects alone
+    * Siblings <-> Reading %
+    * Computer Use <-> Math %
+    * Subjects <-> Science %
+    * Give Language Hw <-> Math %
+    * State <-> Math %
+    * Correct Math HW <-> Math %
+    * Correct Sci HW <-> Math %
+* Certain features given below consistently stands out and are highly relevant factors irrespective of any subjects considered. Hence these features can be considered as a good performance predictors.
+    * Father edu
+    * Mother edu
+    * Read other books
+    * help in HouseholdFather occupation
+    * Express science views
+    * Express SocSci views
+    * Solve science problems
 
 #### Factors influencing average performance
 
 Here we describe the process by which we calculated the scores for performance. A simillar treatment is used for calculating scores in each category in ('Maths %', 'Reading %', 'Science %', 'Social %')
 
- Among top features, 'Father edu' has distinctly higher scores for performance, almost **33%** higher than the second feature indicating a very high relevance.
+ Among top features, 'Father edu' has distinctly high scores for performance, almost **33%** higher than the second best feature indicating a very high relevance.
 
 
     count    180774.000000
@@ -58,7 +79,7 @@ Here we describe the process by which we calculated the scores for performance. 
 
 ![png](output_13_1.png)
 
-Since father education has the highest score, we decided to plot the entire data set with 'Father edu' as a factor. The plot explains an upward trend in the median performance % of the students.
+Since father education has the highest score, we decided to plot the entire data set with 'Father edu' as a factor to explicitly see the influence. The plot explains an upward trend in the median performance %.
 
 ![png](output_13_3.png)
 
@@ -80,7 +101,7 @@ Since father education has the highest score, we decided to plot the entire data
 
 Across various states Girls tend to have a higher median performance than boys.
 
-Some states with notable exception to this rule is Jharkand (JH) and Bihar (BH). Since these state have high gender inequality, this trend could be due to lack of access to education to girls. To confirm, it has to be crosschecked with percentage of girls with access to education.
+Some states with notable exception to this rule are Jharkand (JH) and Bihar (BH). Since these state have high gender inequality, this trend could be due to lack of access to education to girls. To confirm, it has to be crosschecked with percentage of girls with access to education.
 
 ### Do students from South Indian states really excel at Math and Science?
 
@@ -88,8 +109,8 @@ To determine this, we considered southern states as : "Andhra Pradesh", "Kerala"
 
 ![png](output_29_0.png)
 
-We found that central tendendencies of `Southern States` to be slight lower than rest of the country. But it should be noted that number of samples in the `Southern States` is far less. Also, it should be understood that the enrollment rate of southern states is usually higher than rest of country which could be driving down the median values.
+We found that central tendendencies of `Southern States` to be slightly lower than rest of the country. But it should be noted that number of samples in the `Southern States` is far less. Also, it should be understood that the enrollment rate of southern states is usually higher than rest of country which could be driving down the median values. Overall, it has to be concluded that south indian states perform badly compared to the rest of the country.
 
 ![png](output_31_0.png)
 
-To identify if all southern states follow this pattern, we split the data into corresponding southern state. We found that "Kerala" as a notable exception to the trend of southern states. "Kerala" tends to have higher median score than other southern states, rest of the country and the overall median of country. Another exception is the distribution of marks from "Tamil Nadu" with longer tails. "Tamil Nadu" followed the trend of the rest of the country with longer tails at highest end but has lower median score than all others.
+To identify if all southern states follow this pattern, we split the data into corresponding southern state. We found that "Kerala" as a notable exception to the trend of southern states. "Kerala" tends to have higher median score than other southern states, rest of the country and the overall median of country. Another exception is the distribution of marks from "Tamil Nadu" with longer tails. "Tamil Nadu" followed the trend of the rest of the country with longer tails at highest end but has lower median score than all others. Although "Kerala" has a higher median, the distribution is narrower compared to other states.

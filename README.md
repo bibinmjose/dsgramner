@@ -1,15 +1,17 @@
-[Insights from this project](https://bibinmjose.github.io/dsgramner/) 
+[Insights](https://bibinmjose.github.io/dsgramner/)  from this project
 
 ## Setup
 
-To reproduce the project clone the repository: 
+To reproduce the project clone repository: 
 `git clone https://github.com/bibinmjose/dsgramner.git`
 
-unzip `gramener-usecase-nas` to root folder `/dsgramner` if doesn't exist
+unzip `gramener-usecase-nas.zip` to root folder `/dsgramner` if doesn't exist
 
 The [ipython notebook](https://bibinmjose.github.io/dsgramner/ipython.html) is in root folder and can be opened in python3.
 
 `jupyter-notebook National\ Achievement\ Survey.ipynb`
+
+Execute all the cells in jupyter notebook
 
 .html of ipython notebook can be found at `/docs/ipython.html`
 
