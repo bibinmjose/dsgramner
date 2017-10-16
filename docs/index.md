@@ -57,7 +57,7 @@ This concludes that the education of parents were the most decisive predictor in
 
 Here we describe the process by which we calculated the scores for performance. A simillar treatment is used for calculating scores in each category in ('Maths %', 'Reading %', 'Science %', 'Social %')
 
- Among top features, 'Father edu' has distinctly high scores for performance, almost **33%** higher than the second best feature indicating a very high relevance.
+ Among top features, 'Father edu' has distinctly high scores for performance, almost **30%** higher than the second best feature indicating a very high relevance.
 
 
     count    180774.000000
