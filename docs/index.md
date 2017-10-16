@@ -1,4 +1,5 @@
 
+# National Achievement Survey of Class VIII students
 ## Summary
 
 **Questions to Answer**
@@ -6,6 +7,10 @@
 1. What influences students performance the most?
 2. How do boys and girls perform across states?
 3. Do students from South Indian states really excel at Math and Science?
+
+### About this report
+
+This page is the distilled version of analysis of data with the most significant graphs and insights. The orignial version with the codes used to generate the graphs can be found [here](/ipython.html)
 
 
 ### What influences students performance the most?
@@ -27,8 +32,6 @@ We defined a performance metric as 'performance' = average of ('Maths %', 'Readi
 This concludeds that the education of parents were the most decisive predictor in deciding a student's  performance. Among top features, 'Father edu' has distinctly higher scores for performance, almost **33%** higher than the second feature indicating a very high relevance.
 
 
-
-
     count    180774.000000
     mean         38.095342
     std          14.949624
@@ -45,7 +48,11 @@ This concludeds that the education of parents were the most decisive predictor i
     Shape of X	: (180774, 59)
     Shape of y	: (180774,)
     Best 5 Features:
-     [('Father edu', 3906.8744966773766), ('Mother edu', 3052.1893687615902), ('Help in household', 2793.8799410412198), ('Read other books', 2661.1779134014673), ('Father occupation', 2428.0365114374408)]
+     [('Father edu', 3906.8744966773766), 
+     ('Mother edu', 3052.1893687615902), 
+     ('Help in household', 2793.8799410412198), 
+     ('Read other books', 2661.1779134014673), 
+     ('Father occupation', 2428.0365114374408)]
 
 
 
