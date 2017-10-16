@@ -18,8 +18,6 @@ Here we attempted to answer three most pertaining questions about data.
 
 ### What influences students performance the most?
 
-
-
 We defined an additional performance metric as 'performance' = average of ('Maths %', 'Reading %', 'Science %', 'Social %') to find which feature has the highest overall influence. A feature selection is performed and scores are calculated based on `SelectKBest` to evaluvate the relative importance of features. The top features were found for each category is given below.
 
 |Parameter|Best Feature |
@@ -30,7 +28,7 @@ We defined an additional performance metric as 'performance' = average of ('Math
 |Science|'Father edu'|
 |Social|'Help in household'|
 
-![png](output_14_0.png)
+![png](output_14_0.png){width: 120%}
 
 This concludeds that the education of parents were the most decisive predictor in deciding a student's  performance.
 
