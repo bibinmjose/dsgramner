@@ -1,25 +1,25 @@
 
 <!-- # National Achievement Survey of Class VIII students -->
+* auto gen
+{
+    :toc
+}
 
----
-title: Student Performance in Indian Schools
-description: An analysis based on National Achievement Survey
-layout: post
+## Introduction
 
----
-
-## Summary
-
-**Questions to Answer**
-
-1. What influences students performance the most?
-2. How do boys and girls perform across states?
-3. Do students from South Indian states really excel at Math and Science?
+This is a project based on a use case of [Gramener](https://gramener.com), a data science company. The main aim to identify the trends in 8th grade student performance based on National Achievement Survey by NCERT.
 
 ### About this report
 
-This page is a distilled version of analysis with the most significant graphs and insights about data. The orignial version with codes used to generate graphs can be found [here](/ipython.html)
+This is a distilled version of analysis with the most significant insights about data. The orignial version with codes used to generate graphs can be found [**here**](/ipython.html)
 
+## Questions to Answer
+
+Here we attempted to answer three most pertaining questions about data.
+
+1. [What influences students performance the most?](### What influences students performance the most?)
+2. [How do boys and girls perform across states?](### How do boys and girls perform across states?)
+3. [Do students from South Indian states really excel at Math and Science?](### Do students from South Indian states really excel at Math and Science?)
 
 ### What influences students performance the most?
 
@@ -48,8 +48,6 @@ This concludeds that the education of parents were the most decisive predictor i
     max         100.000000
     Name: performance, dtype: float64
 
-
-
     ======	Target Variable	: performance ======
     Shape of X	: (180774, 59)
     Shape of y	: (180774,)
@@ -60,10 +58,7 @@ This concludeds that the education of parents were the most decisive predictor i
      ('Read other books', 2661.1779134014673), 
      ('Father occupation', 2428.0365114374408)]
 
-
-
 ![png](output_13_1.png)
-
 
             Column                    Name Level          Rename
     24  Father edu        Degree and above     5  Degree & above
