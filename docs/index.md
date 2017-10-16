@@ -13,9 +13,7 @@ This is a distilled version of analysis with the most significant insights about
 Here we attempted to answer three most pertaining questions about data.
 
 1. [What influences students performance the most?](#what-influences-students-performance-the-most)
-
-2. [How do boys and girls perform across states?](#q2)
-
+2. [How do boys and girls perform across states?](#how-do-boys-and-girls-perform-across-states)
 3. [Do students from South Indian states really excel at Math and Science?](#do-students-from-south-indian-states-really-excel-at-math-and-science)
 
 ### What influences students performance the most?
