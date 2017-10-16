@@ -6,7 +6,7 @@ This is a project based on a use case of [Gramener](https://gramener.com), a dat
 
 ### About this report
 
-This is a distilled version of analysis with the most significant insights about data. The orignial version with codes used to generate graphs can be found [**here**](/Analysis.html)
+This is a distilled version of analysis with the most significant insights about data. The orignial version with codes used to generate graphs can be found [**here**](/dsgramner/Analysis.html)
 
 ## Questions
 
