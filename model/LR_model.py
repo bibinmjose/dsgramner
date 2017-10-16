@@ -10,7 +10,7 @@ from sklearn.feature_selection import SelectKBest, f_regression
 from sklearn.decomposition import PCA
 
 # Loading dataset
-marks = pd.read_csv('gramener-usecase-nas/nas-pupil-marks.csv')
+marks = pd.read_csv('../gramener-usecase-nas/nas-pupil-marks.csv')
 
 # Print the shape of raw data set
 print ("Shape of raw Data\t:",marks.shape)

@@ -1,0 +1,75 @@
+We have an exciting job opportunity from Gramener for entry level Data Specialists for their Product Development team.The company has shared the criteria to shortlist candidates.Please read on for complete details on how you can get shortlisted for the position. Gramener will be conducting a webinar next week to explain the process and take queries if any.We will share the session details by early next week in this discussion.
+
+Company Name : Gramener
+Designation: Data Specialists
+Tools: Python
+Location : Hyderabad
+
+About Gramener:
+A data science company based out of Hyderabad has been in the Data Science space for past 7 years. We bring value to our customers' business operations by employing a combination of Data Science tools/ techniques and compelling narrative visuals that weave a story. The goal is to democratize the consumption of Data Science and Business Analytics skills to larger audience within enterprise.
+Are you hungry to hone your skills in Data Science?
+Want to score an interview for an entry level position in Gramener's Product Development team?
+Looking for entry level Data Specialists to our Product development team based out of Hyderabad.
+
+Who can apply?
+1. You can demonstrate your skills of analysing data and narrating a story of the same.
+2. You are open to learn newer ways of doing stuff.
+3. Willing to work as part of a team that has challenges thrown at them.
+4. KEY - Can work on one of the below stated problems and bat for the solution. Demonstrate your skills across backend, frontend and data analysis.
+
+Evaluation criteria:
+Each submission will be evaluated on the following criteria:
+1. Each candidate should submit ONE entry only.
+2. Each submission should pick ONE use case to demonstrate your capabilities.
+3. If we find evidence of crowd sourced solution, all entries with the copied code will be dropped from evaluation. Use of common libraries (ex: pandas in python) is an exclusion from this rule.
+4. Is there a working visual built that narrates a story answering the questions 
+a. E.g. A link to a working project on github.io or heroku or your website. 
+b. A github repository link from which we can replicate the solution. 
+c. Share an IPython notebook if your solution does not have a JavaScript based visual.
+5. README file, code comments explaining your approach to the problem.
+6. Demonstrate understanding of the following skills a. Data clean-up, data transformation b. Approach to handle business rules c. Faster rendering of visuals (read Code quality)
+7. Does the solution answer ALL 3 questions in the Use case. Each question needs to be answered with a supporting visual. 8. Plus points if you could find additional insights from the dataset.
+
+Tasks pipeline:
+Product development at Gramener heavily relies on expertise in Python, JavaScript, CSS, HTML, Pandas in no particular order.
+We would prefer you use similar skills while working on one of the below problems. We have identified below three real world problems for your consideration. Request you to review the three and pick ONE for your skill demonstration.
+The data files for each use case can be downloaded from this link - Click Here
+
+Use case 1 - National Achievement Survey
+National Council of Education Research and Training conducts yearly National Achievement Survey. We have provided the data of Class VIII students from 2014.
+
+File to download: gramener-usecase-nas.7z
+
+Questions to answer
+1. What influences students performance the most?
+2. How do boys and girls perform across states?
+3. Do students from South Indian states really excel at Math and Science?
+
+Use case 2 - 2011 India Census
+Indian government carries out census every decade. This dataset contains information from the 2011 census with district level granularity on population, gender, literacy, socioeconomic status (electricity, mobiles, Internet) among a lot of other dimensions.
+File to download: gramener-usecase-census.7z
+
+Questions to answer
+1. Create a geographic map of states with low literacy rates.
+2. Find out most similar districts in Bihar and Tamil Nadu. Similarity can be based on any of the columns from the data.
+3. How does the mobile penetration vary in regions (districts or states) with high or low agricultural workers?
+
+Use case 3 – Cricket
+For the cricket fans this one is for you. We have compiled the stats for Australia (over 60 matches) & India (over 50 matches) from January 2015 to September 2017.
+File to download: gramener-usecase-cricket.zip
+
+Questions to answer
+1. Visualize the performance of India's batting in the match where they scored highest runs in 2016. 2. Compare best bowlers (measured by runs/wicket or runs/over) from India and Australia.
+3. Which players (one from India and one from Australia) have similar performance record in the given timeframe?
+
+Where to Submit?
+Now that you have completed the task and excited to send us your work, please follow the below steps:
+1. Email your work to - projects@jigsawacademy.com latest by 25th October 2017 (deadline         extended).Enteries received post this date will not be considered for the position.
+a. Must: README file explaining the steps
+b. Visual output link and/or c. Code repository (GitLab or GitHub etc) and/or
+d. IPython notebook and/or
+e. Compressed zip file of the above
+2. Subject Line - "Gramener - Product Team - Entry Level - Submission".
+3. Feel free to attach a copy of your latest resume.
+4. If you face any trouble accessing the data files or have any questions on the intended exercise, please email us at cto@gramener.com with subject line in # 2 above.
+5. Candidates shortlisted based on the Evaluation Criteria listed above will hear from us.

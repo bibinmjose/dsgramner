@@ -1,5 +1,6 @@
 
-# National Achievement Survey of Class VIII students
+<!-- # National Achievement Survey of Class VIII students -->
+
 ## Summary
 
 **Questions to Answer**
@@ -10,12 +11,10 @@
 
 ### About this report
 
-This page is the distilled version of analysis of data with the most significant graphs and insights. The orignial version with the codes used to generate the graphs can be found [here](/ipython.html)
+This page is a distilled version of analysis with the most significant graphs and insights about data. The orignial version with codes used to generate graphs can be found [here](/ipython.html)
 
 
 ### What influences students performance the most?
-
-#### Heatmap of feature importance
 
 ![png](output_14_0.png)
 
