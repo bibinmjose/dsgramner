@@ -1,3 +1,4 @@
 theme: jekyll-theme-dinky
 show_downloads: true
-# title: "Find Fraud in Enron Data"
+title: "Student Performance in Indian Schools"
+description: "An analysis based on National Achievement Survey"
