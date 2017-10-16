@@ -1,6 +1,13 @@
 
 <!-- # National Achievement Survey of Class VIII students -->
 
+---
+title: Student Performance in Indian Schools
+description: An analysis based on National Achievement Survey
+layout: post
+
+---
+
 ## Summary
 
 **Questions to Answer**
