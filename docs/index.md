@@ -2,7 +2,7 @@
 <!-- # National Achievement Survey of Class VIII students -->
 ## Introduction
 
-This is a project based on a use case of [Gramener](https://gramener.com), a data science company. The main aim to identify the trends in 8th grade student performance based on National Achievement Survey by NCERT.
+This is a project based on a use case of [Gramener](https://gramener.com), a data science company. The main aim is to identify the trends in 8th grade student performance based on National Achievement Survey by NCERT.
 
 ### About this report
 
@@ -12,15 +12,17 @@ This is a distilled version of analysis with the most significant insights about
 
 Here we attempted to answer three most pertaining questions about data.
 
-1. [What influences students performance the most?](#What influences students performance the most?)
-2. [How do boys and girls perform across states?](#How do boys and girls perform across states?)
-3. [Do students from South Indian states really excel at Math and Science?](#Do students from South Indian states really excel at Math and Science?)
+1. [What influences students performance the most?](#what-influences-students-performance-the-most)
+
+2. [How do boys and girls perform across states?](#q2)
+
+3. [Do students from South Indian states really excel at Math and Science?](#do-students-from-south-indian-states-really-excel-at-math-and-science)
 
 ### What influences students performance the most?
 
-![png](output_14_0.png)
 
-We defined a performance metric as 'performance' = average of ('Maths %', 'Reading %', 'Science %', 'Social %'). A feature selection is performed based on `SelectKBest` to evaluvate the relative importance in predicting performance. The top features were found for each subject as well as for average of all.
+
+We defined an additional performance metric as 'performance' = average of ('Maths %', 'Reading %', 'Science %', 'Social %') to find which feature has the highest overall influence. A feature selection is performed and scores are calculated based on `SelectKBest` to evaluvate the relative importance of features. The top features were found for each category is given below.
 
 |Parameter|Best Feature |
 | --- |:--- |
@@ -30,7 +32,15 @@ We defined a performance metric as 'performance' = average of ('Maths %', 'Readi
 |Science|'Father edu'|
 |Social|'Help in household'|
 
-This concludeds that the education of parents were the most decisive predictor in deciding a student's  performance. Among top features, 'Father edu' has distinctly higher scores for performance, almost **33%** higher than the second feature indicating a very high relevance.
+![png](output_14_0.png)
+
+This concludeds that the education of parents were the most decisive predictor in deciding a student's  performance.
+
+#### Factors influencing average performance
+
+Here we describe the process by which we calculated the scores for performance. A simillar treatment is used for calculating scores in each category in ('Maths %', 'Reading %', 'Science %', 'Social %')
+
+ Among top features, 'Father edu' has distinctly higher scores for performance, almost **33%** higher than the second feature indicating a very high relevance.
 
 
     count    180774.000000
@@ -42,10 +52,7 @@ This concludeds that the education of parents were the most decisive predictor i
     75%          47.320000
     max         100.000000
     Name: performance, dtype: float64
-
     ======	Target Variable	: performance ======
-    Shape of X	: (180774, 59)
-    Shape of y	: (180774,)
     Best 5 Features:
      [('Father edu', 3906.8744966773766), 
      ('Mother edu', 3052.1893687615902), 
@@ -55,6 +62,11 @@ This concludeds that the education of parents were the most decisive predictor i
 
 ![png](output_13_1.png)
 
+Since father education has the highest scores, we decided to plot the entire data set with 'Father edu' as a factor. The plot explains an upward trend in the median % of the students score as shown below.
+
+![png](output_13_3.png)
+
+**Legend**
             Column                    Name Level          Rename
     24  Father edu        Degree and above     5  Degree & above
     25  Father edu              Illiterate     1      Illiterate
@@ -65,10 +77,7 @@ This concludeds that the education of parents were the most decisive predictor i
 
 
 
-![png](output_13_3.png)
-
-
-### How do boys and girls perform across states?
+### How do boys and girls perform across states?![q2](#q2)
 
 ![png](output_19_0.png)
 
