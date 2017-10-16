@@ -1,10 +1,5 @@
 
 <!-- # National Achievement Survey of Class VIII students -->
-* auto gen
-{
-    :toc
-}
-
 ## Introduction
 
 This is a project based on a use case of [Gramener](https://gramener.com), a data science company. The main aim to identify the trends in 8th grade student performance based on National Achievement Survey by NCERT.
@@ -17,9 +12,9 @@ This is a distilled version of analysis with the most significant insights about
 
 Here we attempted to answer three most pertaining questions about data.
 
-1. [What influences students performance the most?](### What influences students performance the most?)
-2. [How do boys and girls perform across states?](### How do boys and girls perform across states?)
-3. [Do students from South Indian states really excel at Math and Science?](### Do students from South Indian states really excel at Math and Science?)
+1. [What influences students performance the most?](#What influences students performance the most?)
+2. [How do boys and girls perform across states?](#How do boys and girls perform across states?)
+3. [Do students from South Indian states really excel at Math and Science?](#Do students from South Indian states really excel at Math and Science?)
 
 ### What influences students performance the most?
 
