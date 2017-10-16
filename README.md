@@ -5,9 +5,13 @@
 To reproduce the project clone the repository: 
 `git clone https://github.com/bibinmjose/dsgramner.git`
 
+unzip `gramener-usecase-nas` to root folder `/dsgramner` if doesn't exist
+
 The [ipython notebook](https://bibinmjose.github.io/dsgramner/ipython.html) is in root folder and can be opened in python3.
 
 `jupyter-notebook National\ Achievement\ Survey.ipynb`
+
+.html of ipython notebook can be found at `/docs/ipython.html`
 
 ### Dependencies
 The packages used include :

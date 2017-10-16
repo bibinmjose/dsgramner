@@ -10,7 +10,7 @@ This is a distilled version of analysis with the most significant insights about
 
 ## Questions
 
-Here we attempted to answer three most pertaining questions about data.
+We have attempted to answer three most pertaining questions below.
 
 1. [What influences students performance the most?](#what-influences-students-performance-the-most)
 2. [How do boys and girls perform across states?](#how-do-boys-and-girls-perform-across-states)
