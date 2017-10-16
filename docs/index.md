@@ -2,13 +2,13 @@
 <!-- # National Achievement Survey of Class VIII students -->
 ## Introduction
 
-This is a project based on a use case of [Gramener](https://gramener.com), a data science company. The main aim is to identify the trends in 8th grade student performance based on National Achievement Survey by NCERT.
+This is a project based on a use case of [Gramener](https://gramener.com), a data science company. The aim is to identify the trends in 8th grade student performance based on National Achievement Survey by NCERT.
 
 ### About this report
 
-This is a distilled version of analysis with the most significant insights about data. The orignial version with codes used to generate graphs can be found [**here**](/ipython.html)
+This is a distilled version of analysis with the most significant insights about data. The orignial version with codes used to generate graphs can be found [**here**](/Analysis.html)
 
-## Questions to Answer
+## Questions
 
 Here we attempted to answer three most pertaining questions about data.
 
@@ -28,7 +28,7 @@ We defined an additional performance metric as 'performance' = average of ('Math
 |Science|'Father edu'|
 |Social|'Help in household'|
 
-![png](output_14_0.png){width: 120%}
+![png](output_14_0.png)
 
 This concludeds that the education of parents were the most decisive predictor in deciding a student's  performance.
 
@@ -58,11 +58,12 @@ Here we describe the process by which we calculated the scores for performance. 
 
 ![png](output_13_1.png)
 
-Since father education has the highest scores, we decided to plot the entire data set with 'Father edu' as a factor. The plot explains an upward trend in the median % of the students score as shown below.
+Since father education has the highest score, we decided to plot the entire data set with 'Father edu' as a factor. The plot explains an upward trend in the median performance % of the students.
 
 ![png](output_13_3.png)
 
 **Legend**
+
             Column                    Name Level          Rename
     24  Father edu        Degree and above     5  Degree & above
     25  Father edu              Illiterate     1      Illiterate
@@ -73,24 +74,22 @@ Since father education has the highest scores, we decided to plot the entire dat
 
 
 
-### How do boys and girls perform across states?![q2](#q2)
+### How do boys and girls perform across states?
 
 ![png](output_19_0.png)
 
 Across various states Girls tend to have a higher median performance than boys.
 
-Some of the states with notable exception to this rule is Jharkand (JH) and Bihar (BH). Since these state have high gender inequality, this trend could be due to lack of access to education to girls. To confirm, it has to be crosschecked with percentage of girls with access to education.
-
-
+Some states with notable exception to this rule is Jharkand (JH) and Bihar (BH). Since these state have high gender inequality, this trend could be due to lack of access to education to girls. To confirm, it has to be crosschecked with percentage of girls with access to education.
 
 ### Do students from South Indian states really excel at Math and Science?
 
-In order to do the analysis, Here we considered southern states as : "Andhra Pradesh", "Kerala", "Karnataka" and "Tamil Nadu". Meanwhile other states are referred to "the rest of the country". The performance score for 'Science and Math' is defined as the mean value of both 'Science' and 'Math'. 
+To determine this, we considered southern states as : "Andhra Pradesh", "Kerala", "Karnataka" and "Tamil Nadu". Meanwhile other states are referred to "the rest of the country". The performance score for 'Science and Math' is defined as the mean value of both 'Science' and 'Math'. 
 
 ![png](output_29_0.png)
 
-We found that central tendendencies of `Southern States` to be slight lower than the rest of the country. But it should be noted that the number of samples in the `Southern States` is far less. Also, it should be understood that the enrollment rate of southern states is usually higher than rest of country which could be driving down the median values.
+We found that central tendendencies of `Southern States` to be slight lower than rest of the country. But it should be noted that number of samples in the `Southern States` is far less. Also, it should be understood that the enrollment rate of southern states is usually higher than rest of country which could be driving down the median values.
 
 ![png](output_31_0.png)
 
-To identify if all southern states follow this pattern, we split the data into corresponding southern states. We found that "Kerala" as a notable exception to the trend of southern states. "Kerala" tends to have higher median score than other southern states, rest of the country and the overall median of country. Another exception is the distribution of marks from "Tamil Nadu" with longer tails. "Tamil Nadu" followed the trend of the rest of the country with longer tails at highest end but has lower median score than all others.
+To identify if all southern states follow this pattern, we split the data into corresponding southern state. We found that "Kerala" as a notable exception to the trend of southern states. "Kerala" tends to have higher median score than other southern states, rest of the country and the overall median of country. Another exception is the distribution of marks from "Tamil Nadu" with longer tails. "Tamil Nadu" followed the trend of the rest of the country with longer tails at highest end but has lower median score than all others.
