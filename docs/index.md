@@ -7,7 +7,7 @@
 2. How do boys and girls perform across states?
 3. Do students from South Indian states really excel at Math and Science?
 
-![here](National Achievement Survey.md)
+[here](National Achievement Survey.md)
 
 ## Data Exploration
 
