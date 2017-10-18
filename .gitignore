@@ -1,6 +1,5 @@
 # Temporary data files
-.ipynb_checkpoints
-
+.ipynb_checkpoints/
 
 # Byte-compiled files
-__pycache__/
+model/__pycache__/
