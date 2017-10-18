@@ -112,6 +112,8 @@ Of the states where girls perform better, Kerala and Delhi stands out. Both stat
 
 <div align = "center"><img src="./index_files/output_20_0.png" width="45%"></div>
 
+The figure shown above sumamrizes all the data based on gender difference. We used two axes for representing data for each state (1) Actual median performance (2) Difference in the median between boys and girls. The length of lines (from 0 at the center) represent the median values while the size of circles maps to sample size. The red and blue bar graph indicates difference with blue favouring girls and red favouring boys. 
+
 ### Do students from South Indian states really excel at Math and Science?
 
 To determine this, we considered southern states as : "Andhra Pradesh", "Kerala", "Karnataka" and "Tamil Nadu". Meanwhile other states are referred to "the rest of the country". The performance score for 'Science and Math' is defined as the mean value of both 'Science' and 'Math'. 
