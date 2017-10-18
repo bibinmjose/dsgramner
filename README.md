@@ -13,7 +13,7 @@ The [ipython notebook](https://bibinmjose.github.io/dsgramner/ipython.html) is i
 
 Execute all the cells in jupyter notebook
 
-.html of ipython notebook can be found at `/docs/ipython.html`
+`.html` of ipython notebook can be found at root folder
 
 ### Dependencies
 The packages used include :
@@ -35,4 +35,4 @@ Datasets used for analysis is provided by "Gramener" and can be found in `gramen
 Since inference is the goal of the questions asked, a linear model is a good choice than a complex one.
 
 To run the model, `cd` into `/model`
-and run `python3 LR_model.py`
+and run `python LR_model.py`
