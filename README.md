@@ -7,13 +7,13 @@ To reproduce the project clone repository:
 
 unzip `gramener-usecase-nas.zip` to root folder `/dsgramner` if doesn't exist
 
-The [ipython notebook](https://bibinmjose.github.io/dsgramner/ipython.html) is in root folder and can be opened in python3.
+Original ipython notebook is in root folder while an html redering can be accessed from [**here**](https://bibinmjose.github.io/dsgramner/ipython_md/analysis.html).
 
 `jupyter-notebook National\ Achievement\ Survey.ipynb`
 
 Execute all the cells in jupyter notebook
 
-`.html` of ipython notebook can be found at root folder
+raw `.html` of ipython notebook can be found at root folder as well.
 
 ### Dependencies
 The packages used include :
