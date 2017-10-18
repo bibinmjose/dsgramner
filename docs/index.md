@@ -110,7 +110,7 @@ Some states with notable exception to this rule are Jharkand (JH) and Bihar (BH)
 
 Of the states where girls perform better, Kerala and Delhi stands out. Both states showed that median % of girls is almost 4% better than boys.
 
-<div align = "center"><img src="./index_files/output_20_0.png" width="50%"></div>
+<div align = "center"><img src="./index_files/output_20_0.png" width="45%"></div>
 
 ### Do students from South Indian states really excel at Math and Science?
 

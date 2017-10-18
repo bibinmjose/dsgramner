@@ -1461,7 +1461,7 @@ import matplotlib.patches as mpatches
 plt.figure(figsize=(12,5))
 
 # setting colors. Maps the max and min values in "diff" to a color map bwr
-c_normal = colors.PowerNorm(1,vmin=min(G_perfomance["diff"]), vmax=max(G_perfomance["diff"]))
+c_normal = colors.PowerNorm(.1,vmin=min(G_perfomance["diff"]), vmax=max(G_perfomance["diff"]))
 _COLORS = cmap(c_normal(G_perfomance["diff"]))
 
 plt.bar(np.arange(len(G_perfomance["diff"])), 
@@ -1542,10 +1542,10 @@ ax.legend(loc=1,ncol=2)
 # annotation patch
 tboy = ax.text(50, -2.2, "Boys", ha="center", va="center", rotation=0,
             size=10,color = "w",
-            bbox=dict(boxstyle="rarrow,pad=0.3", fc="#ff6666", ec="b", lw=0))
+            bbox=dict(boxstyle="rarrow,pad=0.3", fc="grey", ec="b", lw=0))
 tgirl = ax.text(-50, -2.2, "Girls", ha="center", va="center", rotation=0,
             size=10,color = "w",
-            bbox=dict(boxstyle="larrow,pad=0.3", fc="#6666ff", ec="b", lw=0))
+            bbox=dict(boxstyle="larrow,pad=0.3", fc="grey", ec="b", lw=0))
 
 plt.show()
 ```
