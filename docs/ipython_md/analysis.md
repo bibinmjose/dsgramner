@@ -1267,9 +1267,11 @@ plt.show()
 
 ### How do boys and girls perform across states?
 
-Across various states Girls tend to have a higher median performance than boys.
+Across most states Girls tend to have a higher median performance than boys.
 
-Some of the states with notable exception to this rule is Jharkand (JH) and Bihar (BH). Since these state have high gender inequality, this trend could be due to lack of access to education to girls. To confirm, it has to crosschecked with percentage of girls with access to education.
+Some states with notable exception to this rule are Jharkand (JH) and Bihar (BH). Since these state have high gender inequality, this trend could be due to lack of access/support to educational resources to girls compared to boys. There could be other intrinsic reasons as it needs additional supporting data.
+
+Of the states where girls perform better, Kerala and Delhi stands out. Both states showed that median performance of girls is almost 4% higher than boys.
 
 
 ```python
@@ -1287,28 +1289,168 @@ plt.show()
 
 
 ```python
-# Gender: boy =1, girl =2
+# Aggregating median performance based on "State" and "Gender"
+G_perfomance = marks_gender.groupby(["State","Gender"]).median()["performance"].reset_index()
 
-gender_performance = marks_gender.groupby(["State","Gender"]).median()["performance"]
+# pivoting the dataframe to include columns "Boy" and "Girl" and renaming them
+G_perfomance = G_perfomance.pivot(index='State', columns='Gender', values='performance')
+G_perfomance.columns = ["Boy","Girl"]
 
-perf_lst = []
-for l in gender_performance.index:
-    perf_dict = {
-        "State" : l[0],
-        "Gender" : l[1],
-        "performance" : gender_performance[l]    
-    }
-    perf_lst.append(perf_dict)
+# Adding column "diff" with the differenc ein median performance of boys and girls
+G_perfomance["diff"]=G_perfomance["Boy"]-G_perfomance["Girl"]
+
+G_perfomance.head()
 ```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Boy</th>
+      <th>Girl</th>
+      <th>diff</th>
+    </tr>
+    <tr>
+      <th>State</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>AN</th>
+      <td>34.0550</td>
+      <td>37.10125</td>
+      <td>-3.04625</td>
+    </tr>
+    <tr>
+      <th>AP</th>
+      <td>32.0000</td>
+      <td>32.65500</td>
+      <td>-0.65500</td>
+    </tr>
+    <tr>
+      <th>AR</th>
+      <td>32.0875</td>
+      <td>31.33500</td>
+      <td>0.75250</td>
+    </tr>
+    <tr>
+      <th>BR</th>
+      <td>37.0000</td>
+      <td>35.00000</td>
+      <td>2.00000</td>
+    </tr>
+    <tr>
+      <th>CG</th>
+      <td>33.9825</td>
+      <td>33.45500</td>
+      <td>0.52750</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 
 ```python
-G_perfomance = pd.DataFrame(perf_lst)
-G_perfomance = G_perfomance.pivot(index='State', columns='Gender', values='performance')
-G_perfomance.columns = ["Boy","Girl"]
-G_perfomance["diff"]=G_perfomance["Boy"]-G_perfomance["Girl"]
-G_perfomance["Boys_better"]=(G_perfomance["Boy"]-G_perfomance["Girl"])>0
+# Aggregating count of Gender based on "State" and "Gender"
+G_count = marks_gender.groupby(["State","Gender"]).count()[["STUID"]].reset_index()
+
+# pivoting the dataframe to include columns "Boy" and "Girl" and renaming them
+G_count = G_count.pivot(index='State', columns='Gender', values='STUID')
+G_count.columns = ["Boy","Girl"]
+G_count["ratio"] = G_count["Boy"]/G_count["Boy"]
+G_count.head()
 ```
+
+
+
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Boy</th>
+      <th>Girl</th>
+      <th>ratio</th>
+    </tr>
+    <tr>
+      <th>State</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>AN</th>
+      <td>971</td>
+      <td>956</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>AP</th>
+      <td>3450</td>
+      <td>4093</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>AR</th>
+      <td>2438</td>
+      <td>2543</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>BR</th>
+      <td>3407</td>
+      <td>3757</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>CG</th>
+      <td>3346</td>
+      <td>3401</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
 
 
 ```python
@@ -1323,7 +1465,8 @@ c_normal = colors.PowerNorm(1,vmin=min(G_perfomance["diff"]), vmax=max(G_perfoma
 _COLORS = cmap(c_normal(G_perfomance["diff"]))
 
 plt.bar(np.arange(len(G_perfomance["diff"])), 
-        height = G_perfomance["diff"], width = 0.75, align = "center", color=_COLORS)
+        height = G_perfomance["diff"], width = 0.75, align = "center",\
+        color=_COLORS)
 plt.xticks(np.arange(len(G_perfomance.index)),list(G_perfomance.index))
 plt.axhline(0, color='k', linewidth = 0.5)
 plt.xlabel("State")
@@ -1339,6 +1482,76 @@ plt.show()
 
 
 ![png](output_19_0.png)
+
+
+
+```python
+fig = plt.figure(figsize = (5,14),dpi=100)
+
+ax = fig.add_subplot(111)
+ax2 = ax.twiny()
+
+# bar plots on first axis ax
+ax.barh(np.arange(len(G_perfomance["Boy"])),\
+         width = G_perfomance["Boy"],height = 0.1, color="k",\
+        align = "center", alpha =0.25, linewidth = 0)
+ax.barh(np.arange(len(G_perfomance["Girl"])),\
+         width = -G_perfomance["Girl"],height = 0.1, color="k",\
+        align = "center", alpha =0.25, linewidth = 0)
+
+# scatter plots on first axis ax with marker size mapped on to sampe size
+ax.scatter(x = G_perfomance["Boy"],\
+            y = np.arange(len(G_perfomance["diff"])),\
+            s = G_count["Boy"]*0.1,\
+            color = "k", alpha =0.5)
+ax.scatter(x = -G_perfomance["Girl"],\
+            y = np.arange(len(G_perfomance["diff"])),\
+            s = G_count["Girl"]*0.1,\
+            color = "k", alpha =0.5)
+
+
+# First x-axis
+ax.set_xlim(-60, 60)
+ax.set_xticklabels([str(abs(x)) for x in ax.get_xticks()]) # changing the x ticks to remove "-"
+ax.set_xlabel("Median performance")
+
+for a in [100,500]:
+    ax.scatter([],[],c='k', alpha=0.5, s=a,label = "{0}".format(a*10))
+
+# Second x-axis
+ax2.barh(np.arange(len(G_perfomance["diff"])), 
+        width = G_perfomance["diff"], height = 0.75, align = "center",\
+        color=_COLORS)
+
+ax2.set_xlim(-10, 10)
+ax2.grid(False)
+ax2.set_xlabel("Median performance difference (Boys - Girls)")
+
+# y-axis
+ax.set_ylim(-1, len(G_perfomance.index)+2)
+plt.yticks(np.arange(len(G_perfomance.index)),list(G_perfomance.index))
+plt.axvline(x= 0, color='k', linewidth = 0.75, ymax = 0.94)
+
+# legend
+red_patch = mpatches.Patch(color='red', label='Boys Perform Better')
+blue_patch = mpatches.Patch(color='blue', label='Girls Perform Better')
+plt.legend(handles=[blue_patch, red_patch], loc=2, ncol =1, mode = "expand")
+ax.legend(loc=1,ncol=2)
+
+
+# annotation patch
+tboy = ax.text(50, -2.2, "Boys", ha="center", va="center", rotation=0,
+            size=10,color = "w",
+            bbox=dict(boxstyle="rarrow,pad=0.3", fc="#ff6666", ec="b", lw=0))
+tgirl = ax.text(-50, -2.2, "Girls", ha="center", va="center", rotation=0,
+            size=10,color = "w",
+            bbox=dict(boxstyle="larrow,pad=0.3", fc="#6666ff", ec="b", lw=0))
+
+plt.show()
+```
+
+
+![png](output_20_0.png)
 
 
 
@@ -1371,11 +1584,9 @@ G_perfomance[G_perfomance["diff"]>0].sort_values("diff", ascending=False)
       <th>Boy</th>
       <th>Girl</th>
       <th>diff</th>
-      <th>Boys_better</th>
     </tr>
     <tr>
       <th>State</th>
-      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -1387,84 +1598,72 @@ G_perfomance[G_perfomance["diff"]>0].sort_values("diff", ascending=False)
       <td>38.335000</td>
       <td>35.1925</td>
       <td>3.142500</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>BR</th>
       <td>37.000000</td>
       <td>35.0000</td>
       <td>2.000000</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>UK</th>
       <td>34.965000</td>
       <td>33.6750</td>
       <td>1.290000</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>UP</th>
       <td>44.365000</td>
       <td>43.3350</td>
       <td>1.030000</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>WB</th>
       <td>39.165000</td>
       <td>38.3350</td>
       <td>0.830000</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>MN</th>
       <td>37.275000</td>
       <td>36.4650</td>
       <td>0.810000</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>AR</th>
       <td>32.087500</td>
       <td>31.3350</td>
       <td>0.752500</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>SK</th>
       <td>36.777500</td>
       <td>36.0700</td>
       <td>0.707500</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>OR</th>
       <td>36.370000</td>
       <td>35.7400</td>
       <td>0.630000</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>CG</th>
       <td>33.982500</td>
       <td>33.4550</td>
       <td>0.527500</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>NG</th>
       <td>33.275000</td>
       <td>32.8100</td>
       <td>0.465000</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>DN</th>
       <td>44.436667</td>
       <td>44.1400</td>
       <td>0.296667</td>
-      <td>True</td>
     </tr>
   </tbody>
 </table>
@@ -1502,11 +1701,9 @@ G_perfomance[G_perfomance["diff"]<0].sort_values("diff", ascending=True)
       <th>Boy</th>
       <th>Girl</th>
       <th>diff</th>
-      <th>Boys_better</th>
     </tr>
     <tr>
       <th>State</th>
-      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -1518,147 +1715,126 @@ G_perfomance[G_perfomance["diff"]<0].sort_values("diff", ascending=True)
       <td>38.2950</td>
       <td>43.79500</td>
       <td>-5.50000</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>DL</th>
       <td>31.0700</td>
       <td>35.00000</td>
       <td>-3.93000</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>GA</th>
       <td>37.7250</td>
       <td>40.83500</td>
       <td>-3.11000</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>AN</th>
       <td>34.0550</td>
       <td>37.10125</td>
       <td>-3.04625</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>GJ</th>
       <td>34.1050</td>
       <td>36.99000</td>
       <td>-2.88500</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>PY</th>
       <td>28.2850</td>
       <td>30.60000</td>
       <td>-2.31500</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>JK</th>
       <td>30.8450</td>
       <td>32.85500</td>
       <td>-2.01000</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>TN</th>
       <td>30.1800</td>
       <td>31.95000</td>
       <td>-1.77000</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>MH</th>
       <td>38.5050</td>
       <td>40.07000</td>
       <td>-1.56500</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>DD</th>
       <td>47.5925</td>
       <td>49.10500</td>
       <td>-1.51250</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>HR</th>
       <td>34.4300</td>
       <td>35.83500</td>
       <td>-1.40500</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>CH</th>
       <td>37.8650</td>
       <td>39.18750</td>
       <td>-1.32250</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>PB</th>
       <td>37.8575</td>
       <td>39.18000</td>
       <td>-1.32250</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>KA</th>
       <td>34.3650</td>
       <td>35.45500</td>
       <td>-1.09000</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>MZ</th>
       <td>32.8200</td>
       <td>33.77000</td>
       <td>-0.95000</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>TR</th>
       <td>39.1650</td>
       <td>40.00000</td>
       <td>-0.83500</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>AP</th>
       <td>32.0000</td>
       <td>32.65500</td>
       <td>-0.65500</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>RJ</th>
       <td>33.5600</td>
       <td>34.16500</td>
       <td>-0.60500</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>MG</th>
       <td>30.0000</td>
       <td>30.45500</td>
       <td>-0.45500</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>MP</th>
       <td>40.0000</td>
       <td>40.07000</td>
       <td>-0.07000</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>HP</th>
       <td>33.2800</td>
       <td>33.33000</td>
       <td>-0.05000</td>
-      <td>False</td>
     </tr>
   </tbody>
 </table>
@@ -1938,15 +2114,15 @@ for factor in ["math_sci","Maths %","Science %"]:
 ```
 
 
-![png](output_27_0.png)
+![png](output_28_0.png)
 
 
 
-![png](output_27_1.png)
+![png](output_28_1.png)
 
 
 
-![png](output_27_2.png)
+![png](output_28_2.png)
 
 
 
@@ -1959,11 +2135,11 @@ plt.show()
 ```
 
 
-![png](output_28_0.png)
+![png](output_29_0.png)
 
 
 
-![png](output_28_1.png)
+![png](output_29_1.png)
 
 
 
@@ -1974,15 +2150,22 @@ f = sns.violinplot(x="is_south", y="math_sci",data=south, fliersize=0, width = .
 plt.axhline(south["math_sci"].median(), color='r', linewidth = 1, linestyle ="--",\
                 label="Median Score of Country")
 f.set_xticklabels(["rest of the country","southern states"])
+
+# plotting the count data
+plt.scatter(x = south.groupby("is_south").count()["State"].index,\
+            y = [-10.0,-10.0],\
+            s = south.groupby("is_south").count()["State"].values/25,\
+            c="k", linewidth=1,alpha =0.4, label = "Sample size")
+
 plt.suptitle("Math and Science Score")
 plt.xlabel("")
 plt.ylabel("%")
-plt.legend()
+plt.legend(loc =8)
 plt.show()
 ```
 
 
-![png](output_29_0.png)
+![png](output_30_0.png)
 
 
 
@@ -2000,16 +2183,21 @@ for factor in ["math_sci","Maths %","Science %"]:
 ```
 
 
-![png](output_30_0.png)
+![png](output_31_0.png)
 
 
 
-![png](output_30_1.png)
+![png](output_31_1.png)
 
 
 
-![png](output_30_2.png)
+![png](output_31_2.png)
 
+
+
+```python
+count = south.groupby("south_vs_rest").count()["State"].reindex(index=["Rest","AP","KA","KL","TN"])
+```
 
 
 ```python
@@ -2022,6 +2210,11 @@ f = sns.violinplot(x="south_vs_rest", y="math_sci",data=south,\
 plt.axhline(south["math_sci"].median(), color='r', linewidth = 1, linestyle ="--",\
                 label="Median Score of Country")
 f.set_xticklabels(["Rest of the\ncountry","Andhra\nPradesh","Karnataka","Kerala", "Tamil\nNadu"])
+
+plt.scatter(x =[0,1,2,3,4], y=[-10,-10,-10,-10,-10],s = count/15,\
+            label ="Sample size", alpha =0.3,color ="k",linewidth=1,\
+            linestyle ="solid")
+
 plt.suptitle("Math and Science Score")
 plt.xlabel("")
 plt.ylabel("%")
@@ -2032,5 +2225,5 @@ plt.show()
 ```
 
 
-![png](output_31_0.png)
+![png](output_33_0.png)
 
