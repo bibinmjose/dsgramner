@@ -18,7 +18,7 @@ We have attempted to answer three most pertaining questions below.
 
 ### What influences students performance the most?
 
-We defined an additional performance metric as 'performance' = average of ('Maths %', 'Reading %', 'Science %', 'Social %') to find which feature has the highest overall influence. A feature selection is performed and scores are calculated based on `SelectKBest` to evaluvate the relative importance of features. The top features were found for each category is given below.
+We addded an additional feature as 'performance' = average of ('Maths %', 'Reading %', 'Science %', 'Social %') to find which feature has the highest overall influence on student performance. A feature selection is performed based on `SelectKBest` to evaluvate the relative importance of features based on the scores. The top features were found for each category is given below.
 
 
 <div align = "center"><img src="./index_files/f1_heatmap.png"></div>
@@ -33,7 +33,7 @@ We defined an additional performance metric as 'performance' = average of ('Math
 |Social|'Help in household'|
 
 
-> This concludes that the education of parents were decisive in predicting a student's  performance.
+> This concludes that the education of parents and whether they help in household were decisive in predicting a student's  performance.
 
 #### Some interesting observations
 
@@ -58,7 +58,7 @@ We defined an additional performance metric as 'performance' = average of ('Math
 
 Here we describe the process by which we calculated the scores for performance. A simillar treatment is used for calculating scores in each category in ('Maths %', 'Reading %', 'Science %', 'Social %')
 
-> Among top features, 'Father edu' has distinctly high scores for performance, almost **30%** higher than the second best feature indicating a very high relevance.
+> Among top features, 'Father edu' has distinctly high score for performance, almost **30%** higher than the second best feature indicating a very high relevance.
 
 
     count    180774.000000
@@ -82,7 +82,7 @@ Here we describe the process by which we calculated the scores for performance. 
 <div align = "center"><img src="./index_files/f2_perfomance_score.png"></div>
 
 
-> Since father education has the highest score, we decided to plot the entire data set with 'Father edu' as a factor to explicitly see the influence. The plot explains an upward trend in the median performance %.
+> Since father education has the highest score, we decided to plot the performance set w.r.t 'Father edu' to explicitly see the influence. The plot shows an upward trend in the median performance %.
 
 
 <div align = "center"><img src="./index_files/f3_perf_fath_edu.png"></div>
@@ -121,7 +121,7 @@ To determine this, we considered southern states as : "Andhra Pradesh", "Kerala"
 
 <div align = "center"><img src="./index_files/output_30_0.png"></div>
 
-We found that central tendendencies of `Southern States` to be slightly lower than rest of the country. But it should be noted that number of samples in the `Southern States` is far less. Also, it should be understood that the enrollment rate of southern states is usually higher than rest of country which could be driving down the median values. Overall, it has to be concluded that south indian states perform badly compared to the rest of the country.
+We found that central tendendencies of `Southern States` to be slightly lower than rest of the country. But it should be noted that number of samples in the `Southern States` is far less. Also, it should be understood that the enrollment rate of southern states is usually higher than rest of country which could be driving down the median values. Overall, it has to be concluded that south indian states perform badly compared to the rest of the country. The consclusions are based on unequal sample sizes as indicated by the size of the circles below each violin plot.
 
 <div align = "center"><img src="./index_files/output_33_0.png"></div>
 
