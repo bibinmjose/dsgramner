@@ -24,8 +24,6 @@ We addded an additional feature as 'performance' = average of ('Maths %', 'Readi
 
 > The top features were found for each category is given below.
 
-<div align = "center">
-
 |Parameter|Best Feature |
 |---:|:---|
 |Overall Performance|'Father edu'|
@@ -34,7 +32,6 @@ We addded an additional feature as 'performance' = average of ('Maths %', 'Readi
 |Science|'Father edu'|
 |Social|'Help in household'|
 
-</div>
 
 > This concludes that the education of parents and whether they help in household were decisive in predicting a student's  performance.
 

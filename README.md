@@ -1,5 +1,7 @@
 [Insights](https://bibinmjose.github.io/dsgramner/)  from this project
 
+[Github repo](https://github.com/bibinmjose/dsgramner) for the project.
+
 ## Setup
 
 To reproduce the project clone repository: 
