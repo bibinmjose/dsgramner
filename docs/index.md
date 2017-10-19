@@ -18,20 +18,23 @@ We have attempted to answer three most pertaining questions below.
 
 ### What influences students performance the most?
 
-We addded an additional feature as 'performance' = average of ('Maths %', 'Reading %', 'Science %', 'Social %') to find which feature has the highest overall influence on student performance. A feature selection is performed based on `SelectKBest` to evaluvate the relative importance of features based on the scores. The top features were found for each category is given below.
-
+We addded an additional feature as 'performance' = average of ('Maths %', 'Reading %', 'Science %', 'Social %') to find which feature has the highest overall influence on student performance. A feature selection is performed based on `SelectKBest` to evaluvate the relative importance of features based on the scores. The heat map sumamrize the feature importance for each subject: Reading, Science, Social, Mathew and Overall performance. It is curious that certian features are more promienent in deciding the marks of subjects
 
 <div align = "center"><img src="./index_files/f1_heatmap.png"></div>
 
+> The top features were found for each category is given below.
+
+<div align = "center">
 
 |Parameter|Best Feature |
-| --- |:--- |
+|---:|:---|
 |Overall Performance|'Father edu'|
 |Maths|'Help in household'|
 |Reading|'Mother edu'|
 |Science|'Father edu'|
 |Social|'Help in household'|
 
+</div>
 
 > This concludes that the education of parents and whether they help in household were decisive in predicting a student's  performance.
 
@@ -112,6 +115,8 @@ Of the states where girls perform better, Kerala and Delhi stands out. Both stat
 
 <div align = "center"><img src="./index_files/output_20_0.png" width="45%"></div>
 
+> Although the sample size vary across states, the sample size of boys and girls were almost equal within each state.
+
 The figure shown above sumamrizes all the data based on gender difference. We used two axes for representing data for each state (1) Actual median performance (2) Difference in the median between boys and girls. The length of lines (from 0 at the center) represent the median values while the size of circles maps to sample size. The red and blue bar graph indicates difference with blue favouring girls and red favouring boys. 
 
 ### Do students from South Indian states really excel at Math and Science?
@@ -121,8 +126,12 @@ To determine this, we considered southern states as : "Andhra Pradesh", "Kerala"
 
 <div align = "center"><img src="./index_files/output_30_0.png"></div>
 
+> Both southern states and the rest of the country followed a simillar distribution even though the smaple size was differnt.
+
 We found that central tendendencies of `Southern States` to be slightly lower than rest of the country. But it should be noted that number of samples in the `Southern States` is far less. Also, it should be understood that the enrollment rate of southern states is usually higher than rest of country which could be driving down the median values. Overall, it has to be concluded that south indian states perform badly compared to the rest of the country. The consclusions are based on unequal sample sizes as indicated by the size of the circles below each violin plot.
 
 <div align = "center"><img src="./index_files/output_33_0.png"></div>
+
+> Smaple size from Karnatake was small compared to other southern states but showed a wide range
 
 To identify if all southern states follow this pattern, we split the data into corresponding southern state. We found that "Kerala" as a notable exception to the trend of southern states. "Kerala" tends to have higher median score than other southern states, rest of the country and the overall median of country. Another exception is the distribution of marks from "Tamil Nadu" with longer tails. "Tamil Nadu" followed the trend of the rest of the country with longer tails at highest end but has lower median score than all others. Although "Kerala" has a higher median, the distribution is narrower compared to other states.
