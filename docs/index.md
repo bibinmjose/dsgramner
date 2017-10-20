@@ -21,8 +21,7 @@ We have attempted to answer three most pertaining questions below.
 We addded an additional feature as 'performance' = average of ('Maths %', 'Reading %', 'Science %', 'Social %') to find which feature has the highest overall influence on student performance. A feature selection is performed based on `SelectKBest` to evaluvate the relative importance of features based on the scores. The heat map sumamrize the feature importance for each subject: Reading, Science, Social, Mathew and Overall performance. It is curious that certian features are more promienent in deciding the marks of subjects
 
 <div align = "center"><img src="./index_files/f1_heatmap.png"></div>
-
-> The top features were found for each category is given below.
+> The education of parents and whether they help in household were decisive in predicting a student's  performance.
 
 |Parameter|Best Feature |
 |---:|:---|
@@ -33,18 +32,16 @@ We addded an additional feature as 'performance' = average of ('Maths %', 'Readi
 |Social|'Help in household'|
 
 
-> This concludes that the education of parents and whether they help in household were decisive in predicting a student's  performance.
-
 #### Some interesting observations
 
-* Some features are influential in the performance of certain subjects alone
-    * Siblings <-> Reading %
-    * Computer Use <-> Math %
-    * Subjects <-> Science %
+* Some features are influential in the performance of certain subjects alone:
+    * Siblings -> Reading %
+    * Computer Use -> Math %
+    * Subjects -> Science %
     * Give Language Hw <-> Math %
-    * State <-> Math %
-    * Correct Math HW <-> Math %
-    * Correct Sci HW <-> Math %
+    * State -> Math %
+    * Correct Math HW -> Math %
+    * Correct Sci HW -> Math %
 * Certain features given below consistently stands out and are highly relevant factors irrespective of any subjects considered. Hence these features can be considered as a good performance predictors.
     * Father edu
     * Mother edu
