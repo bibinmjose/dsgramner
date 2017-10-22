@@ -38,3 +38,7 @@ Since inference is the goal of the questions asked, a linear model is a good cho
 
 To run the model, `cd` into `/model`
 and run `python LR_model.py`
+
+By [Bibin Jose](https://bibinmjose.github.io/)
+
+MIT License
