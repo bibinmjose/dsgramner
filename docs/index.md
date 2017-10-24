@@ -102,7 +102,7 @@ Here we describe the process by which we calculated the scores for performance. 
 
 <div align = "center"><img src="./index_files/output_19_0.png"></div>
 
-> Among most states, Girls tend to have a higher median performance than boys.
+> Across most states, Girls tend to have a higher median performance than boys.
 
 Some states with notable exception to this rule are Jharkand (JH) and Bihar (BH). Since these state have high gender inequality, this trend could be due to lack of access to educational resources to girls. To confirm, it has to be cross-checked with data pertaining to accesibility of girl's eductaion.
 
