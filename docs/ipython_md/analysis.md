@@ -1040,7 +1040,24 @@ for c in category:
 
 
 ```python
-def clean_data(marks, y_col_name="performance"):
+def clean_data(marks, feature_labels, y_col_name="performance"):
+    """
+    Cleans data: removes data rows with NA values in the target variable and
+    encode categorical variables.
+    Also split the data into features and target variable
+    
+    Parameters
+    ----------
+    data(marks) : tidy data with features and target variable
+    feature_labels : strings containing labels of features
+    y_col_name : target variable label
+    
+    Returns
+    ------
+    X : Features in (pandas dataframe)
+    y: target variable (pandas series)
+    
+    """
     # Creating traning set X and target y
     from sklearn.preprocessing import LabelEncoder
 
@@ -1048,7 +1065,7 @@ def clean_data(marks, y_col_name="performance"):
     marks_nona = marks.dropna(subset=[y_col_name])
 
     # Cloning marks to make a training set X
-    X = marks_nona[category].copy(deep=True)
+    X = marks_nona[feature_labels].copy(deep=True)
 
     # string encoded columns are converted to np array to create training set x
     encoded_columns = ["State","Use computer", "Subjects"]
@@ -1070,6 +1087,21 @@ def clean_data(marks, y_col_name="performance"):
 
 ```python
 def best_features(X,y):
+    
+    """
+    Calculate feature scores based on "SelectKBest" and plot for each feature.
+    
+    Parameters
+    ----------
+    X: features with headers
+    y: Target variable 
+    
+    Returns
+    -------
+    sorted_scores: tuple with this format --> (score, feature label) 
+    The tuple is sorted in descending order based on the scores
+    
+    """
     # Pipeline is defined for feature selection
     from sklearn.feature_selection import SelectKBest,f_regression,mutual_info_regression
     from sklearn.pipeline import Pipeline
@@ -1117,13 +1149,13 @@ final_stat = {}
 
 for t in target:
     print("======\tTarget Variable\t:",t,"======")
-    X, y = clean_data(marks,y_col_name=t)
+    X, y = clean_data(marks,category,y_col_name=t)
     sorted_scores = best_features(X,y)
     final_stat.update({t : tuple_to_dict(sorted_scores)})
     best_f = sorted_scores[0][0]
     
     # plotting
-    marks.boxplot(column=t, by=best_f,figsize=(8,5))
+    marks.boxplot(column=t, by=best_f,figsize=(6,5))
     plt.title(t)
     plt.tight_layout()
     plt.suptitle("")
@@ -1135,7 +1167,7 @@ for t in target:
     Shape of X	: (180774, 59)
     Shape of y	: (180774,)
     Best 5 Features:
-     [('Father edu', 3906.8744966773766), ('Mother edu', 3052.1893687615902), ('Help in household', 2793.8799410412198), ('Read other books', 2661.1779134014673), ('Father occupation', 2428.0365114374408)]
+     [('Father edu', 3906.8744966773675), ('Mother edu', 3052.1893687615657), ('Help in household', 2793.8799410411839), ('Read other books', 2661.177913401476), ('Father occupation', 2428.0365114374526)]
 
 
 
@@ -1159,7 +1191,7 @@ for t in target:
     Shape of X	: (92681, 59)
     Shape of y	: (92681,)
     Best 5 Features:
-     [('Help in household', 914.12688336032204), ('Computer use', 651.62580084653632), ('Dictionary to learn', 610.29101679041355), ('Maths is difficult', 556.06941787824678), ('Solve science problems', 526.11708504368846)]
+     [('Help in household', 914.12688336034773), ('Computer use', 651.62580084658907), ('Dictionary to learn', 610.29101679042014), ('Maths is difficult', 556.06941787826122), ('Solve science problems', 526.11708504370074)]
 
 
 
@@ -1181,7 +1213,7 @@ for t in target:
     Shape of X	: (93271, 59)
     Shape of y	: (93271,)
     Best 5 Features:
-     [('Mother edu', 3424.4980512295078), ('Father edu', 3329.8749927211034), ('Use dictionary', 2309.8832945874847), ('Read other books', 2200.3369324634891), ('# Books', 1922.4965853283888)]
+     [('Mother edu', 3424.4980512297016), ('Father edu', 3329.8749927212643), ('Use dictionary', 2309.8832945875502), ('Read other books', 2200.3369324636265), ('# Books', 1922.4965853284832)]
 
 
 
@@ -1205,7 +1237,7 @@ for t in target:
     Shape of X	: (90992, 59)
     Shape of y	: (90992,)
     Best 5 Features:
-     [('Father edu', 1227.5175152615805), ('Help in household', 1024.425737832905), ('Mother edu', 985.68094452340586), ('Read other books', 960.69082698717637), ('Father occupation', 887.2845094505285)]
+     [('Father edu', 1227.5175152615398), ('Help in household', 1024.4257378328889), ('Mother edu', 985.68094452338516), ('Read other books', 960.69082698712828), ('Father occupation', 887.28450945050372)]
 
 
 
@@ -1229,7 +1261,7 @@ for t in target:
     Shape of X	: (89571, 59)
     Shape of y	: (89571,)
     Best 5 Features:
-     [('Help in household', 1953.6981406711302), ('Father edu', 1042.1749875474054), ('Read other books', 862.49475538243018), ('Solve science problems', 843.71858538199774), ('Express science views', 771.77171134892569)]
+     [('Help in household', 1953.6981406711616), ('Father edu', 1042.1749875474147), ('Read other books', 862.49475538245417), ('Solve science problems', 843.71858538203139), ('Express science views', 771.7717113488527)]
 
 
 
@@ -1256,8 +1288,8 @@ final = s.divide(s.max(axis=1),axis = 0)
 
 # plotting heat map 
 plt.figure(figsize=(15,2))
-f = sns.heatmap(final, linewidths = 1,square= False, cbar= False, vmin=0.2)
-plt.suptitle("Coloring based on K-Score (Darker color indicates stonger influence)")
+f = sns.heatmap(final, linewidths = 1,square= False, cbar= False, cmap = "YlGnBu",vmax = 1, vmin =0)
+plt.suptitle("Coloring based on K-Score (Darker color indicates stronger influence)")
 plt.show()
 ```
 
@@ -1280,6 +1312,7 @@ marks_gender = marks.dropna(subset=["performance"])
 marks_gender =marks_gender[marks_gender["Gender"]!=0]
 marks_gender.boxplot(column="performance", by=["State","Gender"], figsize=(12, 3))
 plt.xticks(rotation="vertical")
+plt.title("")
 plt.show()
 ```
 
@@ -1486,7 +1519,7 @@ plt.show()
 
 
 ```python
-fig = plt.figure(figsize = (5,14),dpi=100)
+fig = plt.figure(figsize = (5,14),dpi=75)
 
 ax = fig.add_subplot(111)
 ax2 = ax.twiny()
@@ -1535,8 +1568,8 @@ plt.axvline(x= 0, color='k', linewidth = 0.75, ymax = 0.94)
 # legend
 red_patch = mpatches.Patch(color='red', label='Boys Perform Better')
 blue_patch = mpatches.Patch(color='blue', label='Girls Perform Better')
-plt.legend(handles=[blue_patch, red_patch], loc=2, ncol =1, mode = "expand")
-ax.legend(loc=1,ncol=2)
+plt.legend(handles=[blue_patch, red_patch], loc=2, ncol =1,frameon=False)
+ax.legend(loc=1,ncol=2,frameon=False)
 
 
 # annotation patch
