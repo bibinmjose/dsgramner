@@ -23,7 +23,7 @@ We performed a feature selection based on `SelectKBest` to evaluate the relative
 <div align = "center"><img src="./index_files/f1_heatmap.png"></div>
 > The education of parents and whether they help in household were decisive in predicting a student's  performance.
 
-The heat map sumamrize the scores obtained for each feature based on different target variable: Reading, Science, Social, Maths and Overall performance. The more prominent feature for a given varaible is shaded with darker color. It is curious that certian features are more relevant in deciding value of target variable.
+The heat map sumamrize the scores obtained for each feature based on different target variable: Reading, Science, Social, Maths and Overall performance with prominent features shaded in darker color.
 
 |Parameter|Best Feature |
 |---:|:---|
@@ -43,7 +43,7 @@ The heat map sumamrize the scores obtained for each feature based on different t
     * State -> Math %
     * Correct Math HW -> Math %
     * Correct Sci HW -> Math %
-* Features given below consistently stands out and are highly relevant across all subjects considered. Hence these features listed below can be considered as a good predictors.
+* Features given below consistently stands out across all subjects considered and can be considered as good predictors.
     * Father edu
     * Mother edu
     * Read other books
@@ -54,9 +54,9 @@ The heat map sumamrize the scores obtained for each feature based on different t
 
 #### Factors influencing average performance
 
-Here we describe the process by which we calculated the scores for performance. A simillar treatment is used for calculating scores in each category in ('Maths %', 'Reading %', 'Science %', 'Social %')
+Here we describe the process by which we calculated the scores for performance. A simillar treatment is used fto calculate scores for 'Maths %', 'Reading %', 'Science %',and  'Social %'.
 
-> Among top features, 'Father edu' has distinctly high score for performance, almost **30%** higher than the second best feature indicating a very high relevance.
+> Among top features, 'Father edu' has distinctly high score for performance, almost **30%** higher than nearest second.
 
 
     count    180774.000000
@@ -104,30 +104,32 @@ Here we describe the process by which we calculated the scores for performance. 
 
 > Across most states, Girls tend to have a higher median performance than boys.
 
-Some states with notable exception to this rule are Jharkand (JH) and Bihar (BH). Since these state have high gender inequality, this trend could be due to lack of access to educational resources to girls. To confirm, it has to be cross-checked with data pertaining to accesibility of girl's eductaion.
+Some states with notable exception to this rule are Jharkand (JH) and Bihar (BH). Since these state have high gender inequality, this trend could be due to [lack of access to educational resources](http://mhrd.gov.in/sites/upload_files/mhrd/files/upload_document/EFA-Review-Report-final.pdf) to girls. To confirm, it has to be cross-checked with data pertaining to accesibility of girl's eductaion in these states.
 
 Of the states where girls perform better, Kerala and Delhi stands out. Both states showed that median % of girls is almost 4% better than boys.
 
 <div align = "center"><img src="./index_files/output_20_0.png" width="45%"></div>
 
-> Although vary considerably across states, the sample size remained almost the same for boys and girls within each state. This further solidifies the conclusions based on gender difference.
+> Although vary considerably across states, the sample size remained the same for boys and girls within each state. This further affirms our conclusions based on gender difference.
 
-The figure shown above sumamrizes the data based on gender difference. We used two axes for representing data for each state (1) Actual median performance on bottom  (2) Difference in the median between boys and girls on top. The length of lines (from 0 at the center) represent median values while size of circles maps to sample size. The red and blue bar graph indicates difference with blue favouring girls and red favouring boys. 
+The figure shown above sumamrizes the data based on gender difference. We used two axes for representing data for each state (1) Actual median performance on bottom  (2) Difference in the median between boys and girls on top. The length of lines (from 0 at the center) represent median values while size of circles maps to sample size. The bar graph indicates difference with blue favouring girls and red favouring boys. 
 
 ### Do students from South Indian states really excel at Math and Science?
 
-To determine this, we considered southern states as : "Andhra Pradesh", "Kerala", "Karnataka" and "Tamil Nadu". Meanwhile other states are referred to  as "the rest of country". The performance score for 'Science and Math' is defined as the mean value of both 'Science' and 'Math'. 
+To determine this, we considered southern states as : "Andhra Pradesh", "Kerala", "Karnataka" and "Tamil Nadu". Meanwhile other states are referred to  as "the rest of country". The performance score for 'Science and Math' is defined as the mean value of both 'Science' and 'Math'.
 
 
 <div align = "center"><img src="./index_files/output_30_0.png"></div>
 
 > Both southern states and the rest of the country followed a simillar distribution even though the smaple size was different.
 
-We found that central tendendencies of `Southern States` to be slightly lower than the rest of country. But it should be noted that number of samples in the `Southern States` is far less. Overall, it has to be concluded that south indian states perform worse compared to the rest of country. These consclusions are based on unequal sample sizes as indicated by the circles below each violin plot.
+We found that central tendendencies of `Southern States` to be slightly lower than the rest of country. But it should be noted that number of samples in the `Southern States` is far less. Overall, south indian states perform worse compared to the rest of country. These consclusions are based on unequal sample sizes as indicated by the circles below each violin plot.
 
 <div align = "center"><img src="./index_files/output_33_0.png"></div>
 
-> Sample size from Karnataka was small compared to other southern states but showed a wide range.
+> Sample size from Karnataka was small compared to other southern states but showed a wider distribution.
 
-To identify if all southern states follow this pattern, we split the data into corresponding southern state. We found that "Kerala" as an exception to the trend of southern states. "Kerala" tends to have higher median score than other southern states, rest of the country and the overall median of country. Another exception is the distribution of marks from "Tamil Nadu" with longer tails. "Tamil Nadu" followed the trend of rest of the country with longer tails at highest end but has lower median score than all others. Although "Kerala" has a higher median, the distribution is narrower compared to other states.
+To identify if all southern states follow this pattern, we split the data into corresponding southern state and found that "Kerala" as an exception to the trend. "Kerala" tends to have higher median score than other southern states, rest of the country and the overall median of country. Although "Kerala" has a higher median, the distribution is narrower compared to other states.
+
+Among southern states, "Tamil Nadu" followed the trend of rest of the country with longer tails but with a lower median score than all others.
 
