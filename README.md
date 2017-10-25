@@ -40,5 +40,3 @@ To run the model, `cd` into `/model`
 and run `python LR_model.py`
 
 By [Bibin Jose](https://bibinmjose.github.io/)
-
-MIT License

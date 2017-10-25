@@ -116,12 +116,14 @@ The figure shown above sumamrizes the data based on gender difference. We used t
 
 ### Do students from South Indian states really excel at Math and Science?
 
+> South Indian students tend to perform badly compared tot he rtest of the country.
+
 To determine this, we considered southern states as : "Andhra Pradesh", "Kerala", "Karnataka" and "Tamil Nadu". Meanwhile other states are referred to  as "the rest of country". The performance score for 'Science and Math' is defined as the mean value of both 'Science' and 'Math'.
 
 
 <div align = "center"><img src="./index_files/output_30_0.png"></div>
 
-> Both southern states and the rest of the country followed a simillar distribution even though the smaple size was different.
+> Both southern states and the rest of the country followed a simillar distribution even though the sample size was different.
 
 We found that central tendendencies of `Southern States` to be slightly lower than the rest of country. But it should be noted that number of samples in the `Southern States` is far less. Overall, south indian states perform worse compared to the rest of country. These consclusions are based on unequal sample sizes as indicated by the circles below each violin plot.
 
