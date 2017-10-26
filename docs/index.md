@@ -129,9 +129,9 @@ We found that central tendendencies of `Southern States` to be slightly lower th
 
 <div align = "center"><img src="./index_files/output_33_0.png"></div>
 
-> Sample size from Karnataka was small compared to other southern states but showed a wider distribution.
+> Kerala was an exception among southern states with higher median score than other southern states as well as the rest of the country.
 
 To identify if all southern states follow this pattern, we split the data into corresponding southern state and found that "Kerala" as an exception to the trend. "Kerala" tends to have higher median score than other southern states, rest of the country and the overall median of country. Although "Kerala" has a higher median, the distribution is narrower compared to other states.
 
-Among southern states, "Tamil Nadu" followed the trend of rest of the country with longer tails but with a lower median score than all others.
+Sample size from Karnataka was small compared to other southern states but showed a wider distribution. Among southern states, "Tamil Nadu" followed the trend of rest of the country with longer tails but with a lower median score than all others.
 
