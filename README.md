@@ -41,6 +41,6 @@ and run `python LR_model.py`
 
 ## To Do
 - [X] Make a simple linear model
-- [] Split each categorical variable into its own category in the linear model.
+- [ ] Split each categorical variable into its own category in the linear model.
 
 By [Bibin Jose](https://bibinmjose.github.io/)
