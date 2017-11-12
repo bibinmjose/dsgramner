@@ -39,4 +39,8 @@ Since inference is the goal of the questions asked, a linear model is a good cho
 To run the model, `cd` into `/model`
 and run `python LR_model.py`
 
+## To Do
+- [X] Make a simple linear model
+- [ ] Split each categorical variable into its own category in the linear model.
+
 By [Bibin Jose](https://bibinmjose.github.io/)
