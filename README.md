@@ -30,7 +30,7 @@ The packages used include :
 
 All the major documentation of this project can be accessed from the markdown file or the html in folder `docs`.
 
-Datasets used for analysis is provided by "Gramener" and can be found in `gramener-usecase-nas`. Te dataset is based on the national achievement survey conducted by NCERT for 8th grade students.
+Datasets used for analysis is provided by "Gramener" and can be found in `gramener-usecase-nas`. The dataset is based on national achievement survey conducted by NCERT for 8th grade students.
 
 ## Model
 
